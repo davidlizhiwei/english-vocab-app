@@ -584,13 +584,17 @@
                 <select id="sortSelect" onchange="changeSort(this.value)" style="padding:8px 15px;border-radius:8px;border:1px solid #6366f1;background:#1e293b;color:#fff;font-size:14px;">
                     <option value="original">📝 原始顺序</option>
                     <option value="random">🎲 随机顺序</option>
-                    <option value="page">📚 按页面(P1-P6)</option>
+                    <option value="page">📚 按页面(P1-P12)</option>
                     <option value="page1">P1 核心词汇</option>
                     <option value="page2">P2 短语搭配</option>
                     <option value="page3">P3 易混词汇</option>
                     <option value="page4">P4 核心词汇</option>
                     <option value="page5">P5 形容词副词</option>
                     <option value="page6">P6 短语动词</option>
+                    <option value="page7">P7 副词补充</option>
+                    <option value="page9">P9 复合形容词</option>
+                    <option value="page10">P10 易混词汇</option>
+                    <option value="page11">P11 短语动词</option>
                     <option value="unlearned">❌ 未掌握</option>
                 </select>
                 <span id="currentPage" style="color:#6366f1;font-size:14px;margin-left:10px;">共68词</span>
@@ -821,6 +825,33 @@
             { word: "curious", meaning: "adj.好奇的", phonetic: "/ˈkjʊəriəs/", root: "cur", rootMean: "关心", memory: "cur(关心) + ious", examples: [{en: "Children are very curious.", zh: "孩子们很好奇。"}], page: 5 },
             { word: "confident", meaning: "adj.自信的", phonetic: "/ˈkɒnfɪdənt/", root: "fid", rootMean: "相信", memory: "con + fid(相信) + ent", examples: [{en: "I'm confident about the future.", zh: "我对未来很有信心。"}], page: 5 },
             { word: "independent", meaning: "adj.独立的", phonetic: "/ˌɪndɪˈpendənt/", root: "pend", rootMean: "挂", memory: "in(不) + dependent(依赖的)", examples: [{en: "She is very independent.", zh: "她很独立。"}], page: 5 },
+            { word: "personally", meaning: "adv.就个人而言", phonetic: "/ˈpɜːsənəli/", root: "person", rootMean: "个人", memory: "personal(个人的) + ly", examples: [{en: "Personally, I prefer tea.", zh: "就个人而言，我更喜欢茶。"}], page: 5 },
+            { word: "generally", meaning: "adv.一般地", phonetic: "/ˈdʒenrəli/", root: "general", rootMean: "一般", memory: "general(一般的) + ly", examples: [{en: "Generally, the weather is good.", zh: "一般来说，天气很好。"}], page: 5 },
+            { word: "eventually", meaning: "adv.最终", phonetic: "/ɪˈventʃuəli/", root: "event", rootMean: "事件", memory: "eventual(最终的) + ly", examples: [{en: "Eventually, she agreed.", zh: "最终她同意了。"}], page: 5 },
+
+            // P7 副词补充
+            { word: "personally", meaning: "adv.就个人而言", phonetic: "/ˈpɜːsənəli/", root: "person", rootMean: "个人", memory: "personal + ly", examples: [{en: "Personally, I think...", zh: "就个人而言，我认为..."}], page: 7 },
+            { word: "carefully", meaning: "adv.仔细地", phonetic: "/ˈkeəfəli/", root: "care", rootMean: "关心", memory: "careful + ly", examples: [{en: "Please listen carefully.", zh: "请仔细听。"}], page: 7 },
+            { word: "generally", meaning: "adv.一般地", phonetic: "/ˈdʒenrəli/", root: "general", rootMean: "一般", memory: "general + ly", examples: [{en: "Generally speaking...", zh: "一般说来..."}], page: 7 },
+            { word: "increasingly", meaning: "adv.越来越多地", phonetic: "/ɪnˈkriːsɪŋli/", root: "increase", rootMean: "增加", memory: "increasing + ly", examples: [{en: "It is increasingly important.", zh: "这越来越重要。"}], page: 7 },
+            { word: "unfortunately", meaning: "adv.不幸地", phonetic: "/ʌnˈfɔːtʃənətli/", root: "fortune", rootMean: "运气", memory: "unfortunate + ly", examples: [{en: "Unfortunately, I can't come.", zh: "不幸的是，我来不了。"}], page: 7 },
+
+            // P9 复合形容词
+            { word: "well-known", meaning: " adj.著名的", phonetic: "/ˌwelˈnəʊn/", root: "well+known", rootMean: "好+知道", memory: "well-known", examples: [{en: "He is a well-known writer.", zh: "他是一位著名作家。"}], page: 9 },
+            { word: "kind-hearted", meaning: "adj.善良的", phonetic: "/ˌkaɪndˈhɑːtɪd/", root: "kind+heart", rootMean: "善良+心", memory: "kind-hearted", examples: [{en: "She is kind-hearted.", zh: "她很善良。"}], page: 9 },
+            { word: "self-confident", meaning: "adj.自信的", phonetic: "/ˌselfˈkɒnfɪdənt/", root: "self+confident", rootMean: "自己+自信", memory: "self-confident", examples: [{en: "He is very self-confident.", zh: "他非常自信。"}], page: 9 },
+            { word: "hard-working", meaning: "adj.勤劳的", phonetic: "/ˌhɑːdˈwɜːkɪŋ/", root: "hard+working", rootMean: "努力+工作", memory: "hard-working", examples: [{en: "Chinese people are hard-working.", zh: "中国人很勤劳。"}], page: 9 },
+            { word: "long-term", meaning: "adj.长期的", phonetic: "/ˌlɒŋˈtɜːm/", root: "long+term", rootMean: "长+学期", memory: "long-term", examples: [{en: "We need a long-term plan.", zh: "我们需要长期计划。"}], page: 9 },
+            { word: "warm-hearted", meaning: "adj.热心的", phonetic: "/ˌwɔːmˈhɑːtɪd/", root: "warm+heart", rootMean: "温暖+心", memory: "warm-hearted", examples: [{en: "She is warm-hearted.", zh: "她很热心。"}], page: 9 },
+            { word: "man-made", meaning: "adj.人造的", phonetic: "/ˌmænˈmeɪd/", root: "man+made", rootMean: "人+制造", memory: "man-made", examples: [{en: "This is a man-made lake.", zh: "这是个人工湖。"}], page: 9 },
+            { word: "high-tech", meaning: "adj.高科技的", phonetic: "/ˌhaɪˈtek/", root: "high+tech", rootMean: "高+技术", memory: "high-tech", examples: [{en: "This is high-tech equipment.", zh: "这是高科技设备。"}], page: 9 },
+
+            // P10 易混词汇补充
+            { word: "farther", meaning: "adv./adj.更远(距离)", phonetic: "/ˈfɑːðə/", root: "far", rootMean: "远", memory: "farther = far + ther", examples: [{en: "It is farther than I thought.", zh: "比我想象的更远。"}], page: 10 },
+            { word: "further", meaning: "adv./adj.更远；进一步", phonetic: "/ˈfɜːðə/", root: "far", rootMean: "远", memory: "further = far + ther", examples: [{en: "We need further information.", zh: "我们需要更多信息。"}], page: 10 },
+            { word: "clothing", meaning: "n.衣服(总称)", phonetic: "/ˈkləʊðɪŋ/", root: "cloth", rootMean: "布", memory: "clothing = cloth + ing", examples: [{en: "We need more clothing.", zh: "我们需要更多衣服。"}], page: 10 },
+            { word: "receive", meaning: "v.收到(客观收到)", phonetic: "/rɪˈsiːv/", root: "ceiv", rootMean: "接收", memory: "receive", examples: [{en: "I received a letter.", zh: "我收到了一封信。"}], page: 10 },
+            { word: "accept", meaning: "v.接受(主观接受)", phonetic: "/əkˈsept/", root: "cept", rootMean: "接受", memory: "accept", examples: [{en: "I accepted his invitation.", zh: "我接受了他的邀请。"}], page: 10 },
 
             // P6 短语动词
             { word: "look up to", meaning: "钦佩；仰慕", root: "look", rootMean: "看", memory: "look up(向上看) + to(向)", examples: [{en: "I look up to my teacher.", zh: "我仰慕我的老师。"}], page: 6 },
@@ -839,6 +870,28 @@
             { word: "work out", meaning: "算出；解决", root: "work", rootMean: "工作", memory: "work(工作) + out(外)", examples: [{en: "I can't work out this problem.", zh: "我算不出这道题。"}], page: 6 },
             { word: "figure out", meaning: "算出；理解", root: "fig", rootMean: "数字", memory: "figure(数字) + out(外)", examples: [{en: "I can't figure out why.", zh: "我无法理解为什么。"}], page: 6 },
             { word: "stay up", meaning: "熬夜", root: "stay", rootMean: "停留", memory: "stay(停留) + up(上)", examples: [{en: "I stayed up late last night.", zh: "昨晚我熬夜了。"}], page: 6 },
+
+            // P11 更多短语动词
+            { word: "run into", meaning: "撞上；遇到", root: "run", rootMean: "跑", memory: "run + into", examples: [{en: "I ran into an old friend.", zh: "我偶然遇到了老朋友。"}], page: 11 },
+            { word: "come up with", meaning: "想出", root: "come", rootMean: "来", memory: "come up + with", examples: [{en: "She came up with a good idea.", zh: "她想出了一个好主意。"}], page: 11 },
+            { word: "get over", meaning: "克服", root: "get", rootMean: "得到", memory: "get + over", examples: [{en: "I can't get over it.", zh: "我无法克服它。"}], page: 11 },
+            { word: "get through", meaning: "通过；接通", root: "get", rootMean: "得到", memory: "get + through", examples: [{en: "I got through the exam.", zh: "我通过了考试。"}], page: 11 },
+            { word: "hang up", meaning: "挂断", root: "hang", rootMean: "挂", memory: "hang + up", examples: [{en: "Please hang up the phone.", zh: "请挂断电话。"}], page: 11 },
+            { word: "hold on", meaning: "坚持；稍等", root: "hold", rootMean: "持有", memory: "hold + on", examples: [{en: "Hold on, please.", zh: "请稍等。"}], page: 11 },
+            { word: "show up", meaning: "出现", root: "show", rootMean: "显示", memory: "show + up", examples: [{en: "He didn't show up.", zh: "他没有出现。"}], page: 11 },
+            { word: "wake up", meaning: "醒来", root: "wake", rootMean: "唤醒", memory: "wake + up", examples: [{en: "I wake up at 6 am.", zh: "我6点醒来。"}], page: 11 },
+            { word: "clean up", meaning: "清理", root: "clean", rootMean: "清洁", memory: "clean + up", examples: [{en: "Please clean up the room.", zh: "请清理房间。"}], page: 11 },
+            { word: "cheer up", meaning: "使...高兴", root: "cheer", rootMean: "欢呼", memory: "cheer + up", examples: [{en: "Cheer up! Everything will be fine.", zh: "振作起来！一切都会好的。"}], page: 11 },
+            { word: "dress up", meaning: "打扮", root: "dress", rootMean: "穿", memory: "dress + up", examples: [{en: "She likes to dress up.", zh: "她喜欢打扮。"}], page: 11 },
+            { word: "give away", meaning: "赠送", root: "give", rootMean: "给", memory: "give + away", examples: [{en: "He gave away his money.", zh: "他捐出了钱。"}], page: 11 },
+            { word: "give out", meaning: "分发", root: "give", rootMean: "给", memory: "give + out", examples: [{en: "Please give out the papers.", zh: "请分发试卷。"}], page: 11 },
+            { word: "turn up", meaning: "出现；调高", root: "turn", rootMean: "转", memory: "turn + up", examples: [{en: "Please turn up the volume.", zh: "请调高音量。"}], page: 11 },
+            { word: "turn on", meaning: "打开", root: "turn", rootMean: "转", memory: "turn + on", examples: [{en: "Please turn on the light.", zh: "请开灯。"}], page: 11 },
+            { word: "turn off", meaning: "关闭", root: "turn", rootMean: "转", memory: "turn + off", examples: [{en: "Please turn off the TV.", zh: "请关掉电视。"}], page: 11 },
+            { word: "take out", meaning: "取出", root: "take", rootMean: "拿", memory: "take + out", examples: [{en: "Please take out the trash.", zh: "请把垃圾拿出来。"}], page: 11 },
+            { word: "take off", meaning: "脱下；起飞", root: "take", rootMean: "拿", memory: "take + off", examples: [{en: "Please take off your shoes.", zh: "请脱掉鞋子。"}], page: 11 },
+            { word: "take up", meaning: "开始从事；占据", root: "take", rootMean: "拿", memory: "take + up", examples: [{en: "She took up painting.", zh: "她开始学画画。"}], page: 11 },
+            { word: "take after", meaning: "与...相像", root: "take", rootMean: "拿", memory: "take + after", examples: [{en: "She takes after her mother.", zh: "她像她妈妈。"}], page: 11 },
         ];
 
         // 当前词汇表（可过滤/排序）
@@ -1076,6 +1129,18 @@
                     break;
                 case 'page6':
                     vocabulary = allVocabulary.filter(v => v.page === 6);
+                    break;
+                case 'page7':
+                    vocabulary = allVocabulary.filter(v => v.page === 7);
+                    break;
+                case 'page9':
+                    vocabulary = allVocabulary.filter(v => v.page === 9);
+                    break;
+                case 'page10':
+                    vocabulary = allVocabulary.filter(v => v.page === 10);
+                    break;
+                case 'page11':
+                    vocabulary = allVocabulary.filter(v => v.page === 11);
                     break;
                 case 'unlearned':
                     // 未掌握的单词
